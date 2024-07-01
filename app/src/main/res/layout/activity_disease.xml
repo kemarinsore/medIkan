@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DiseaseActivity">
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/layout_bar" />
+
+    <ImageView
+        android:id="@+id/img_fish"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/add_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_save"
+        app:layout_constraintRight_toRightOf="@+id/btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/bar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_save"
+        app:layout_constraintRight_toRightOf="@+id/btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/img_fish"
+        app:startIconDrawable="@drawable/ic_baseline_person">
+
+        <com.tok.medikan.util.custom.EditTextCustom
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nama Riwayat"
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Simpan Data"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

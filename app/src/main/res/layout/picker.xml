@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="Pilih Gambar Dengan"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_title" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_gallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_camera"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title">
+
+            <ImageView
+                android:id="@+id/img_gallery"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_baseline_gallery"
+                app:layout_constraintDimensionRatio="3:1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Galeri"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/img_gallery" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/gray_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_gallery"
+            app:layout_constraintRight_toRightOf="@+id/btn_gallery"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/gray_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_gallery"
+            app:layout_constraintLeft_toLeftOf="@+id/btn_camera"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btn_gallery"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title">
+
+            <ImageView
+                android:id="@+id/img_camera"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_baseline_camera"
+                app:layout_constraintDimensionRatio="3:1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="kamera"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/img_camera" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

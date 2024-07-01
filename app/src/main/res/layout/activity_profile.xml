@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProfileActivity">
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/layout_bar" />
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/base"
+        app:layout_constraintBottom_toTopOf="@+id/til_username"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_save"
+        app:layout_constraintRight_toRightOf="@+id/btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/bar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/til_email"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_save"
+        app:layout_constraintRight_toRightOf="@+id/btn_save"
+        app:startIconDrawable="@drawable/ic_baseline_person">
+
+        <com.tok.medikan.util.custom.EditTextCustom
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nama"
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_save"
+        app:layout_constraintRight_toRightOf="@+id/btn_save"
+        app:startIconDrawable="@drawable/ic_baseline_email">
+
+        <com.tok.medikan.util.custom.EditTextEmail
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Simpan Data"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
